@@ -9,7 +9,7 @@ description: Blog
 author: Ian Zhang
 email: ian.zhangzhe@gmail.com
 language: zh-CN
-timezone: China
+timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -72,7 +72,11 @@ stylus:
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: git
+  repo: https://github.com/alaahong/alaahong.github.io.git
+  branch: gh-pages
+  message: hexo deploy
+
 # Others
 index_generator:
   per_page: 5 ##首页默认10篇文章标题 如果值为0不分页
