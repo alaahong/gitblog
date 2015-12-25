@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Welcome to my world
+title: 小红说
 subtitle: 手中执剑,方能保护所爱之人.Trust me,honey
 description: Blog
 author: Ian Zhang
-email: ian.zhangzhe@gmail.com
+email: hi@ianzhang.cn
 language: zh-CN
 timezone:
 
@@ -74,7 +74,6 @@ stylus:
 deploy:
   type: git
   repo: https://github.com/alaahong/alaahong.github.io.git
-  branch: gh-pages
   message: hexo deploy
 
 # Others
@@ -96,3 +95,8 @@ feed:
     type: atom ##feed类型 atom或者rss2
     path: atom.xml ##feed路径
     limit: 20  ##feed文章最小数量
+# 自动生成sitemap
+sitemap:
+path: sitemap.xml
+baidusitemap:
+path: baidusitemap.xml
