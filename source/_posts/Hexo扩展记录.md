@@ -70,3 +70,18 @@ generate即可
     </html>
     
 ![404demo](/attachpic/404demo.jpg)
+
+## 增加 categories 和 tags
+进入项目根目录, 新建模块
+    
+    $ hexo new page tags
+    $ hexo new page categories
+    
+同时修改source下面categories和tags下 对应的 index.md
+增加相应的 layout: categories   layout: tags
+    
+如果希望菜单栏有对应的选项的话,修改主题 _config.yml ,在menu下增加  
+    
+    Categories: /categories
+    Tags: /tags
+
