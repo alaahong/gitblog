@@ -6,7 +6,7 @@ categories: hexo
 # Hexo扩展记录
 ## Hexo生成sitemap站点地图和rss atom的方法
 发现自带的系统缺了很多组件，一一补全。
-
+<!-- more -->
     http://localhost:4000/sitemap.xml
 ![nositemapxml](/attachpic/nositemapxml.jpg)
 
