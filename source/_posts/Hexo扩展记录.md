@@ -85,3 +85,48 @@ generate即可
     Categories: /categories
     Tags: /tags
 
+## 插入音乐
+
+
+```
+<center>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="http://music.163.com/outchain/player?type=2&id=28952247&auto=0&height=66"></iframe>
+</center>
+```
+<center>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="http://music.163.com/outchain/player?type=2&id=28952247&auto=0&height=66"></iframe>
+</center>
+
+## 插入视频
+```
+<iframe height=498 width=510 src="http://player.youku.com/embed/XMTQyMjc3MTM4MA==" frameborder=0 allowfullscreen></iframe>
+```
+<iframe height=498 width=510 src="http://player.youku.com/embed/XMTQyMjc3MTM4MA==" frameborder=0 allowfullscreen></iframe>
+
+
+## 增加响应式的视频
+安装 hexo-tag-video
+
+```
+    $ npm install hexo-tag-video --save
+    npm WARN install Couldn't install optional dependency: Unsupported
+    npm WARN install Couldn't install optional dependency: Unsupported
+    npm WARN install Couldn't install optional dependency: Unsupported
+    hexo-site@0.0.0 F:\blog\blog
+    └── hexo-tag-video@0.0.2
+```   
+    
+    
+修改 `_config.yml.`
+
+    plugins:
+      - hexo-tag-video
+      
+使用格式：    
+
+!["import video with plugin in hexo"](/attachpic/importvideowithplugininhexo.png)
+
+例如：
+
+    {% video '<iframe height=498 width=510 src="http://player.youku.com/embed/XODkwMTU4MTMy" frameborder=0 allowfullscreen></iframe>' %}
+
