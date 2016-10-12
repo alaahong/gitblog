@@ -1,6 +1,6 @@
 var g = {
     type: "xianggu",
-    link: "http://ianzhang.cn/",
+    link: "http://www.ianzhang.cn/post/lanshouxianggu/",
     shareImg: "xianggu_files/b.jpg",
     isSubscribe: 0,
     num: 0,
@@ -26,6 +26,7 @@ if (isDesktop) {
 var body, blockSize, GameLayer = [], GameLayerBG, touchArea = [], GameTimeLayer;
 var transform, transitionDuration;
 function init(a) {
+    document.title='你能搞到多少香菇？';
     showWelcomeLayer();
     body = document.getElementById("gameBody") || document.body;
     body.style.height = window.innerHeight + "px";
@@ -133,6 +134,7 @@ function gameOver() {
     }, 1500);
     console.log(shareText(_gameScore));
     var a = shareText(_gameScore).replace("<br/><br/>", "");
+    document.title='不服来测！摘了'+_gameScore+'只香菇';
     retSetWeixinShare({
         result: g.type,
         openid: g.openid,
@@ -287,7 +289,7 @@ function backBtn() {
     hideGameScoreLayer();
     showWelcomeLayer()
 }
-var mebtnopenurl = "http://www.ianzhang.cn/";
+var mebtnopenurl = "http://www.ianzhang.cn/post/lanshouxianggu/";
 function shareText(a) {
     if (a <= 49) {
         return "一共摘了" + a + "只香菇！<br/><br/>第一翅为一个女孩屎这么香菇！"
@@ -331,10 +333,35 @@ function cookie(name, value, time) {
 }
 document.write(createGameLayer());
 function share() {
-    document.getElementById("share-wx").style.display = "block";
-    document.getElementById("share-wx").onclick = function () {
-        this.style.display = "none"
-    }
+    //document.getElementById("share-wx").style.display = "block";
+    //document.getElementById("share-wx").onclick = function () {
+    //    this.style.display = "none"
+    //}
+    wx.onMenuShareAppMessage({
+        title: '不服来测！一共摘了'+_gameScore+'只香菇', // 分享标题
+        desc: '一共摘了'+_gameScore+'只香菇', // 分享描述
+        link: 'http://www.ianzhang.cn/xianggu/', // 分享链接
+        imgUrl: 'http://www.ianzhang.cn/xianggu/xianggu_files/b.jpg', // 分享图标
+        type: '', // 分享类型,music、video或link，不填默认为link
+        dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+        success: function () {
+            // 用户确认分享后执行的回调函数
+        },
+        cancel: function () {
+            // 用户取消分享后执行的回调函数
+        }
+    });
+    wx.onMenuShareTimeline({
+        title: '不服来测！一共摘了'+_gameScore+'只香菇', // 分享标题
+        link: 'http://www.ianzhang.cn/xianggu/', // 分享链接
+        imgUrl: 'http://www.ianzhang.cn/xianggu/xianggu_files/b.jpg', // 分享图标
+        success: function () {
+            // 用户确认分享后执行的回调函数
+        },
+        cancel: function () {
+            // 用户取消分享后执行的回调函数
+        }
+    });
 }
 $("#toushu").click(function () {
     $("#container").show()
