@@ -1,6 +1,6 @@
 title: lanshouxianggu
 date: 2016-10-13 01:39:43
-tags: [life,2016]
+tags: [life]
 categories: life
 ---
 # 蓝瘦香菇
